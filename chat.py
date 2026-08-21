@@ -12,22 +12,34 @@ while True:
         print("Cat: mrrp... finally. 🐈")
         break
 
+    if not user:
+        continue
+
     prompt = f"Human: {user}\nCat:"
 
-    response = model.generate(
-        prompt,
-        max_new_tokens=80,
-    )
+    # Keep generating until we get something
+    while True:
+        response = model.generate(
+            prompt,
+            max_new_tokens=80,
+        )
 
-    # Remove the prompt if the model repeats it
-    if response.startswith(prompt):
-        response = response[len(prompt):]
+        if response.startswith(prompt):
+            response = response[len(prompt):]
 
-    # Remove accidental conversation labels
-    response = response.replace("Human:", "")
-    response = response.replace("Cat:", "")
-    response = response.replace("Cart:", "")
+        response = response.strip()
 
-    response = response.strip()
+        if "Human:" in response:
+            response = response.split("Human:", 1)[0].strip()
+
+        if response.startswith("Cat:"):
+            response = response[4:].strip()
+
+        # Empty → generate again
+        if response == "":
+            continue
+
+        # Got a response → leave retry loop
+        break
 
     print(f"Cat: {response}\n")
