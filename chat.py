@@ -15,13 +15,13 @@ while True:
     if not user:
         continue
 
-    prompt = f"Human: {user}\nCat:"
+    prompt = f"Human: {user}\nCat: "
 
     # Keep generating until we get something
     while True:
         response = model.generate(
             prompt,
-            max_new_tokens=80,
+            max_new_tokens=50
         )
 
         if response.startswith(prompt):
