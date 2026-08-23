@@ -1,6 +1,6 @@
 import tensorless as tl
 
-model = tl.load("cat.tl")
+model = tl.load("english.tl")
 
 print("🐈 CatTongue is awake!")
 print("Type 'exit' to leave.\n")
@@ -22,7 +22,7 @@ while True:
         response = model.generate(
             prompt,
             max_new_tokens=50
-        )
+            )
 
         if response.startswith(prompt):
             response = response[len(prompt):]
