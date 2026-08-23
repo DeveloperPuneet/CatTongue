@@ -103,7 +103,8 @@ Each example contains a human message and the corresponding cat response:
 
 You can add more conversations to make CatTongue learn more responses and personality.
 
-Some real chats with model:
+Some real chats with model:<br>
+```
 You: “Do you trust me?”
 Cat: “only if you walk toward the kitchen. 😼🐾”
 You: “Who is your enemy?”
@@ -136,7 +137,7 @@ You: “Are you a good cat?”
 Cat: “MEOW. 😼🐈 ...mrrp... 🤫🐈”
 You: “Do you fear me?”
 Cat: “That's my legercasing where I was excupt your spe? no.”
-
+```
 ## 🛠 Built With
 
 * Python
