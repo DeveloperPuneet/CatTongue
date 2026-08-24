@@ -1,7 +1,7 @@
 import tensorless as tl
 
 print("Pretraining base model...")
-base_model = tl.pretrain(out="pretrained_base.tl", max_seq_len=30)
+base_model = tl.pretrain(out="pretrained_base.tl", max_seq_len=30, epochs=80)
 print("Base model pretrained -> pretrained_base.tl")
 
 print("Fine-tuning on cat conversations...")
