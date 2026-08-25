@@ -1,6 +1,6 @@
 # 🐈 CatTongue
 
-A tiny talking-cat chatbot trained with [Tensorless](https://pypi.org/project/tensorless/).
+A tiny talking-cat chatbot trained with [Tensorless-Pytorch](https://pypi.org/project/tensorless-pytorch/).
 
 CatTongue learns from a small collection of human messages and cat responses, then tries to respond like a chaotic, dramatic cat.
 
@@ -26,23 +26,16 @@ CatTongue/
 │   └── conversations.json
 ├── train.py
 ├── chat.py
-├── requirements.txt
 ├── README.md
 └── .gitignore
 ```
 
 ## 🚀 Setup
 
-Install the dependencies:
+install Tensorless directly:
 
 ```bash
-pip install -r requirements.txt
-```
-
-Or install Tensorless directly:
-
-```bash
-pip install tensorless
+pip install tensorless-pytorch
 ```
 
 ## 🧠 Train
@@ -142,6 +135,7 @@ Cat: “That's my legercasing where I was excupt your spe? no.”
 
 * Python
 * Tensorless
+* Pytorch
 
 ## 🤔 Why?
 
